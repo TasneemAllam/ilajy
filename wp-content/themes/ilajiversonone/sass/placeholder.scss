@@ -1,0 +1,52 @@
+$c-breakpoints : (
+"small" : 600px,
+"medium" : 900px,
+"large" : 1200px
+);
+
+$default-breakpoint : root;
+$current-breakpoint : $default-breakpoint;
+
+$placeholders : ();
+
+@mixin breakpoint($breakpoint){
+  $value : map-get($c-breakpoints , $breakpoint);
+  @if $value != null{
+    $current-breakpoint : $breakpoint !global;
+    @media (min-width : $value) {
+      @content;
+    }
+    $current-breakpoint : $default-breakpoint !global;
+  } @else {
+    @warn "Invalid breakpoint '#{$breakpoint}'";
+  }
+}
+
+@mixin placeholder($name) {
+  @if not index($placeholders , $name){
+    $placeholders : append($placeholders , $name) !global;
+    @at-root{
+      @each $breakpoint , $value in $c-breakpoints{
+        @media (min-width : $value){
+          %#{$name}-#{$breakpoint}{
+            @content;
+          }
+        }
+      }
+      %#{$name}-#{$default-breakpoint}{
+          @content;
+        }
+    }
+  } @else {
+    @warn "Placeholder '#{$name}' already exists.";
+  }
+}
+
+@mixin _($name){
+  @extend %#{$name}-#{$current-breakpoint} !optional;
+}
+
+@include placeholder('clear'){
+  clear : both;
+  overflow : hidden;
+}

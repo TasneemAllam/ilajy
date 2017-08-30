@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'HelveticaNeueLT Arabic 75 Bold';
+  src: url('../font/bold/helveticaneueltarabic.eot?90442246');
+  src: url('../font/bold/helveticaneueltarabic.eot?90442246#iefix') format('embedded-opentype'),
+       url('../font/bold/helveticaneueltarabic.woff2?90442246') format('woff2'),
+       url('../font/bold/helveticaneueltarabic.woff?90442246') format('woff'),
+       url('../font/bold/helveticaneueltarabic.ttf?90442246') format('truetype'),
+       url('../font/bold/helveticaneueltarabic.svg?90442246#HelveticaNeueLTArabic-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Arabic 45 Light';
+  src: url('../font/light/helveticaneueltarabic.eot?90442246');
+  src: url('../font/light/helveticaneueltarabic.eot?90442246#iefix') format('embedded-opentype'),
+       url('../font/light/helveticaneueltarabic.woff2?90442246') format('woff2'),
+       url('../font/light/helveticaneueltarabic.woff?90442246') format('woff'),
+       url('../font/light/helveticaneueltarabic.ttf?90442246') format('truetype'),
+       url('../font/light/helveticaneueltarabic.svg?90442246#HelveticaNeueLTArabic-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Arabic 55 Roman';
+  src: url('../font/roman/helveticaneueltarabic.eot?90442246');
+  src: url('../font/roman/helveticaneueltarabic.eot?90442246#iefix') format('embedded-opentype'),
+       url('../font/roman/helveticaneueltarabic.woff2?90442246') format('woff2'),
+       url('../font/roman/helveticaneueltarabic.woff?90442246') format('woff'),
+       url('../font/roman/helveticaneueltarabic.ttf?90442246') format('truetype'),
+       url('../font/roman/helveticaneueltarabic.svg?90442246#HelveticaNeueLTArabic-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+$primary-font : 'HelveticaNeueLT Arabic 75 Bold', Sans-Serif;
+$second-font : 'HelveticaNeueLT Arabic 45 Light', Sans-Serif;
+$third-font : 'HelveticaNeueLT Arabic 55 Roman', Sans-Serif;
